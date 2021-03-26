@@ -1,0 +1,207 @@
+body{
+    background-color: #effae9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "head head" 
+                         "formulas graficas1"
+                         "formulas graficas2"
+                         "foot foot";
+}
+
+.cabezera{
+    background-color: #cbd8b8;
+    grid-area: head;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "titulo menu" 
+}
+
+
+.formulario{
+    grid-area: formulas;
+    justify-self: center;
+    padding-top: 20px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr 3fr 1fr 4fr;
+    grid-template-areas: "lbecuaciones lbecuaciones" 
+                         "txtnueva txtnueva"
+                         "btagregar btagregar"
+                         "lbguardadas lbguardadas"
+                         "txtguardadas txtguardadas"
+                         "btgraficar btlimpiar"
+                         "relleno relleno"
+                         "relleno relleno";
+    justify-items: center;
+    align-items: auto;                
+
+
+}
+
+.iniciar{
+    grid-row-start: formulas;
+    grid-column-start: formulas;
+    grid-row-end: foot;
+    grid-column-end: grafica1;
+    justify-self: center;
+    padding-top: 20px;
+    justify-items: center;
+    align-items: center; 
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "lbtitulo lbtitulo" 
+                         "lbcorreo txtcorreo"
+                         "lbcontraseña txtconrataseña"
+                         "btiniciar btregistrarse";  
+}
+
+#lbtitulo{
+ 
+    grid-area: lbtitulo;
+}
+
+#lbcorreo{
+    grid-area: lbcorreo;
+}
+
+#txtcorreo{
+    grid-area: txtcorreo;
+}
+
+#lbcontraseña{
+    grid-area: lbcontraseña;
+}
+
+#txtconrtaseña{
+    grid-area: txtconrataseña;
+}
+
+#btiniciar{
+    grid-area: btiniciar;
+}
+
+#btregistrarse{
+    grid-area: btregistrarse;
+}
+
+#lbecuaciones{
+    grid-area: lbecuaciones;
+    align-self: end;
+}
+
+#txtnueva{
+    grid-area: txtnueva;
+    justify-self: stretch;
+    margin: 50px 0px;
+}
+
+#btagregar{
+    grid-area:btagregar;
+}
+
+#lbguardadas{
+    grid-area:lbguardadas;
+
+    align-self: center;
+}
+
+#txtguardadas{
+    grid-area:txtguardadas;
+    justify-self: stretch;
+    text-justify: start;
+    resize: none;
+
+}
+
+#btgraficar{
+    grid-area:btgraficar;
+}
+
+#btlimpiar{
+    grid-area:btlimpiar;
+}
+
+.txt{
+    font: 2em arial,sans-serif;
+    padding: 10px;
+    border-color: #536142;
+    border-width: 3px;
+}
+
+#grafica1{
+    grid-area: graficas1;
+}
+
+#grafica2{
+    grid-area: graficas2;
+    margin-bottom: 50px;
+}
+div[id ^= 'grafica']{
+    display: inline-block;
+    background-color: #f5e4a9;
+    padding: 10px;
+
+
+}
+
+svg{
+    background-color: #ffffff;
+}
+
+
+.titulo{
+    font: 2.4em arial,sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: #323E23;
+    padding-left: 20px;
+    letter-spacing: 2pt;
+    grid-area: titulo;
+
+}
+
+
+.menu{
+    font: 1.25em arial,sans-serif;
+    grid-area: menu;
+    justify-self: end;
+    align-self: center;
+    margin-right: 20px;
+}
+
+.subtitulo{
+    font: 2.4em arial,sans-serif;
+    font-weight: bold;
+    letter-spacing: 1pt;
+
+}
+
+.boton{
+    background-color: #f5e4a9;
+    font: 2em bold arial,sans-serif;
+    border-radius: 15px;
+    border-color: #536142;
+    border-width: 3px;
+    padding: 4px 15px;
+    font-weight: bold;
+    letter-spacing: 1pt;
+    margin: 20px;
+    text-align: center;
+    align-self: center;
+}
+
+
+.pie{
+    background-color: #91a07a;
+    grid-area: foot;
+}
+
+.text{
+    font: 1em arial,sans-serif;
+    color: #323E23;
+    padding-left: 20px;
+    letter-spacing: 1pt;
+    font-weight: bold;
+}
+

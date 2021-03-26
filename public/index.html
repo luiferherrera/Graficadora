@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Graficas</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <link href="style/normalize.css" rel="stylesheet" type="text/css">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+</head>
+
+<body>
+    
+    <header class="cabezera">
+        <h1 class="titulo">Graficadora de Funciones</h1>
+        <div class="menu">
+            <ul>
+                <li id="iniciar_m"><a href="html/auth.html" class="text">Iniciar Sesion</a></li>
+                <li id="cerrar_m"><a href=# class="text">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <form class="formulario">
+        <label for="guardadas" class="subtitulo" id="lbecuaciones">Ecuaciones</label><br>
+        <input type="text" id="txtnueva" class="txt"><br>
+        <button type="button" class="boton" id="btagregar">Agregar</button><br>
+        <label for="guardadas" class="subtitulo" id="lbguardadas">Ecuaciones Guardadas</label><br>
+        <textarea readonly type="text" id="txtguardadas" class="txt"></textarea><br>
+        <button type="button" class="boton" id="btgraficar">Graficar</button>
+        <button type="reset" class="boton" id="btlimpiar">Limpiar</button>
+    </form>
+
+    <section class="graficas">
+        <h2 class="subtitulo">Numeros Reales</h2>
+        <div id="grafica1"></div>
+    </section>
+
+    <section class="graficas">
+        <h2 class="subtitulo">Funcion Contadora de Numeros primos</h2>
+        <div id="grafica2"></div>
+    </section>
+
+    <footer class="pie">
+        <h6 class="text">Heho por Luis Herrera</h6>
+    </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBoulqzyGZ11xcMXGHcnVDKnt5jQ3YOwkE",
+            authDomain: "graficadora-c577a.firebaseapp.com",
+            databaseURL: "https://graficadora-c577a.firebaseio.com",
+            projectId: "graficadora-c577a",
+            storageBucket: "graficadora-c577a.appspot.com",
+            messagingSenderId: "795749360589",
+            appId: "1:795749360589:web:52f928fc358ab2f2d45a84",
+            measurementId: "G-HM9DX0JKDV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const ver = firebase.auth();
+    </script>
+
+    <script src="js/functions.js"></script>
+</body>
+
+</html>
